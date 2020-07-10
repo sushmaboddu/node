@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title> Employee Information</title>
+    <link rel="stylesheet" type="text/css" href="first.css">
+    <script>
+        alert("Employee Details");
+
+        function display() {
+            var EmpId = document.getElementById('EmpId').value;
+            document.getElementById('output').innerHTML = EmpId;
+            var EmpName = document.getElementById('EmpName').value;
+            document.getElementById('output').innerHTML = EmpName;
+            var EmpSalary = document.getElementById('EmpSalary').value;
+            document.getElementById('output').innerHTML = EmpSalary;
+            document.write(+EmpId + "<br>" + EmpName + "<br>" + EmpSalary);
+            alert("Employee Details");
+        }
+    </script>
+</head>
+
+<body>
+    <h1 align="middle">
+    </h1>
+    <form name="employee" method="post" onsubmit="display()">
+        EmpId:<input type="text" name="EmpId" id="EmpId"></input>
+        <br><br> EmpName:
+        <input type="text" name="EmpName" id="EmpName"></input>
+        <input type="radio" name="EmpName" id="EmpName">Male</input>
+        <input type="radio" name="EmpName" id="EmpName">Female</input>
+        <br><br> EmpSalary:
+        <input type="text" name="EmpSalary" id="EmpSalary"></input>
+        <br><br>
+        <input type="submit" onclick="display()"></input>
+        <button id="Cancel">Cancel</button>
+        <div id="output">
+        </div>
+    </form>
+</body>
+
+</html>
